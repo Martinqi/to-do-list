@@ -1,0 +1,6 @@
+
+
+
+     onchange  ：内容改变失去焦点触发
+     oninput   ：内容改变触发
+     onkeydown ：事件会在用户按下一个键盘按键时发生

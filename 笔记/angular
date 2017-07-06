@@ -1,0 +1,34 @@
+*安装angular ----npm  install angular
+
+angular
+适合用在大量的增删改查的页面;
+
+<body ng-app="myapp">  <!--指定应用范围-->
+<div ng-controller="ctrl"><!--控制器-->
+ {{}}    视图
+</div>
+</body>
+方法 module
+<script>                []依赖
+    angular.module("myapp",[])      必须是$scope(依赖注入)
+        .controller("ctrl",function ($scope){
+            $scope.x1="ffffff";
+            $scope.x2=angular.uppercase($scope.x1);
+    })
+</script>
+
+ng-init="one=0;two=0" 指定初始值
+双向数据绑定 新值  旧值
+$scope.$watch("one",function(a,b){
+console.log(a,b)
+})
+
+factory 自定义一个服务
+
+过滤
+limmitTo:3:0     3为位数  0开始位置
+
+
+            javascript   amd   cmd
+            amd   异步模块的定义方式    前台  async=true引用时打开异步
+            cmd   通用的模块定义方式    后台

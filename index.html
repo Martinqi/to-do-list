@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+</head>
+<!--指定应用范围-->
+<body ng-app="myapp" ng-init="one=0;two=0">
+<!--控制器-->
+<div ng-controller="ctrl">
+    <!--视图 -->
+       <p>{{x1}}</p>
+       <p>{{x2}}</p>
+       <input type="text" ng-model="one">
+       <input type="text" ng-model="two">
+       {{one*1+two*1}}
+   </div>
+</body>
+</html>
+<script>
+    angular.module("myapp",[])
+//                                     依赖注入
+        .controller("ctrl",function ($scope){
+
+            $scope.x1="ffffff";
+            $scope.x2=angular.uppercase($scope.x1);
+            $scope.$watch("one",function (a,b) {
+                console.log(a,b)
+            })
+    })
+</script>
