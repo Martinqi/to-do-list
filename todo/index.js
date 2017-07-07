@@ -138,14 +138,7 @@ angular.module("myapp",[])
             $scope.current.son=[];
             localStorage.message_do=JSON.stringify($scope.do_arr);
             localStorage.message=JSON.stringify($scope.date);
-        }
-
+        };
 
 
     }]);
-window.onload=function () {
-    let btn=document.querySelector('.wancheng');
-    if (btn.checked==true){
-       alert(1)
-    }
-}

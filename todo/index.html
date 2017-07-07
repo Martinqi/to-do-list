@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
-    <script src="../../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
     <script src="index.js"></script>
 </head>
 <body ng-app="myapp">
@@ -39,9 +39,8 @@
                     <input  readonly class="title" type="text" ng-model="current.name">
                 </div>
                 <div class="list" ng-repeat="item in current.son">
-                    <input class="wancheng" type="checkbox" checked="checked">
+                    <input class="wancheng" type="checkbox" ng-click="do(current.id,item.id)">
                     <input class="peng" type="text" ng-model="item.name"  ng-keyup="up()">
-                    <button type="button" ng-click="do(current.id,item.id)" class="btn btn-success">完成</button>
                     <button class="btn btn-danger" ng-click="remove(current.id,item.id)">删除记录</button>
                 </div>
                 <button ng-click="add_con(current.id)" style="display:block;margin: auto" class="glyphicon glyphicon-plus btn btn-success"></button>
